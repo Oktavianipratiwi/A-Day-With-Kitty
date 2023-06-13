@@ -1,0 +1,249 @@
+@font-face {
+    font-family: "Duera Bold";
+    src: url('./fonts/FabricsLight.ttf')
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* CONTAINER BACKGROUND */
+
+.container-all {
+    background-image: url(./img/background.png);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* AUDIO  */
+
+.audio {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+}
+
+#play, #pause {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#play:hover, #pause:hover {
+    opacity: 1;
+}
+
+/* TITLE + CAT HEAD CONTAINER */
+
+header {
+    margin: 0 auto;
+    position: relative;
+    max-width: 500px;
+    margin-bottom: 3%;
+}
+
+/* TITLE IMG  */
+
+.title {
+    max-width: 500px;
+}
+
+/* CAT HEAD STYLING */
+
+.cat-head-container {
+    position: relative;
+    width: 291px;
+    top: 20px;
+    left: -50px;
+    transform: rotate(-7deg);
+}
+
+.cat-eye {
+    position: absolute;
+    top: 78px;
+    left: 57px;
+    width: 70px;
+    height: 33.5px;
+    border: 1px solid transparent;
+    overflow: hidden;
+    border-radius: 53% 47% 59% 42% / 56% 40% 58% 39%;
+}
+
+.cat-eye2 {
+    position: absolute;
+    top: 78px;
+    left: 166px;
+    width: 70px;
+    height: 33.5px;
+    border: 1px solid transparent;
+    overflow: hidden;
+    border-radius: 42% 59% 47% 53% / 40% 56% 39% 58%;
+}
+
+.cat-pupil{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 10px 90%;
+    transform: rotate(40deg);
+    position: absolute;
+    left: 15px;
+    top: 0; 
+}
+
+/* BUTTON STYLING */
+.svg {
+    width: 500px;
+    position: absolute;
+    top: 0px;
+    left: -60px;
+    pointer-events: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+} 
+
+.button-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 370px;
+    min-height: 250px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 8px 16px rgba(38, 35, 35, 0.12);
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+    text-decoration: none;
+    color: black;
+}
+
+.button-container:not(:first-child) {
+    margin-left: 24px;
+}
+
+.button-container:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.26);
+    animation: shake 1.5s;
+}
+
+@keyframes shake {
+    10%, 90% {
+    transform: translateY(-1px);
+    }
+      
+    20%, 80% {
+    transform: translateY(2px);
+    }
+
+    30%, 50%, 70% {
+    transform: translateY(-3px);
+    }
+
+    40%, 60% {
+    transform: translateY(3px);
+    }
+}
+
+.btn-arrow:hover::after {
+    content: '';
+    position: absolute;
+    top: 184px;
+    height : 0;
+    width : 0;
+    border-right : 12px solid transparent;
+    border-bottom : 17px solid black;
+    border-left : 12px solid transparent;
+}
+
+.button-container span {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Duera Bold';
+    font-size: 3.5em;
+    letter-spacing: 0.02em;
+    line-height: 84%;
+}
+
+/* WON STYLING  */
+
+.bossed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bossed p {
+    margin-top: 10px;
+    margin-bottom: 37px;
+    font-size: 20px;
+    line-height: 84%;
+    text-transform: uppercase;
+    font-family: 'Duera Cond';
+    letter-spacing: 0.02em;
+    color: rgb(77, 77, 77);
+}
+
+.hide {
+    display: none;
+}
+
+@media only screen and (max-width: 850px) {
+    .audio {
+        top: 10px;
+        right: 20px;
+    }
+
+    .cat-head-container {
+        position: relative;
+        left: -15px;
+    }
+
+    .title {
+        max-width: 200px;
+        margin-bottom: 5%;
+        position: relative;
+        left: 50px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+
+    .button-container {
+        min-width: 270px;
+        min-height: 150px;
+    }
+
+    .button-container:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .button-container span {
+        font-size: 2em;
+        letter-spacing: 0.02em;
+        line-height: 84%;
+    }
+    
+    .button-container:nth-child(1) {
+        margin-bottom: 2%;
+    }
+}

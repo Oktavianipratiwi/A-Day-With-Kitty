@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A day with Cat !</title>
+    <link rel="icon" href="./style/img/favicon.ico"/>
+    <link rel="stylesheet" href="./style/style.css">
+    <script type="module" src="./js/index.js"></script>
+</head>
+<body>  
+    
+    <div class="container-all">
+        <div class="audio">
+            <audio autoplay loop id="background-music" src="./style/music/mitchrineko.mp3"></audio>
+            <button id="play" onclick="document.getElementById('background-music').play()"><img src="./style/img/Play_icon.svg" alt=""></button>
+            <button id="pause" onclick="document.getElementById('background-music').pause()"><img src="./style/img/Pause_icon.svg" alt=""></button>
+        </div>
+        <header>
+            <div class="cat-head-container">
+                <img src="./style/img/catface_noeyes.svg" alt="">
+                <div class="eye cat-eye">
+                    <div class="cat-pupil pupil-left"></div>
+                </div>
+                <div class="eye cat-eye2">
+                    <div class="cat-pupil pupil-right"></div>
+                </div>
+            </div>
+            <div class="title-container">
+                <img class="title" src="./style/img/Homepage_Title.svg" alt="">
+            </div>
+        </header>
+
+        <main class="buttons-container">
+            <a id="cat-snake-btn" class="button-container btn-arrow" href="./catSnake.html">
+                <div id="bossed" class="bossed hide">
+                    <img src="./style/img/bossdit.svg" alt="crown because you won catSnake game">
+                    <p>boss'd</p>
+                </div>
+                <div class="hide svg" id="svg"></div>
+                <span>Cat</span>
+                <span>snake</span>
+            </a>
+            <a id="get-em-btn" class="button-container btn-arrow" href="./getEm.html">
+                <div id="dominated" class="bossed hide">
+                    <img src="./style/img/bossdit.svg" alt="crown because you won catSnake game">
+                    <p>dominated</p>
+                </div>
+                <div class="hide svg" id="svg"></div>
+                <span>Lets go </span>
+                <span>get them!</span>
+            </a>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js" integrity="sha512-BB7rb8ZBAxtdJdB7nwDijJH9NC+648xSzviK9Itm+5APTtdpgKz1+82bDl4znz/FBhd0R7pJ/gQtomnMpZYzRw==" crossorigin="anonymous"></script>
+</body>
+</html>
